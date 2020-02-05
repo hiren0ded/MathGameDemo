@@ -20,14 +20,15 @@ public class GameController {
 
     @PostMapping("multiplication/results")
     @ResponseBody
-    public Boolean result(String multiplication, int userAnswer)
+    public Boolean result(@RequestParam String multiplication,@RequestParam int userAnswer,
+                          String user)
     {
         String[] temp = multiplication.split("\\*");
         int multi1 = Integer.parseInt(temp[0]);
         int multi2 = Integer.parseInt(temp[1]);
 
         int actual = multi1 * multi2;
-        System.out.println(multiplication + " " + userAnswer);
+        System.out.println(user + " "+multiplication + " " + userAnswer);
 
         return actual == userAnswer;
     }
