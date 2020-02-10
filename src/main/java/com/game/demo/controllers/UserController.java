@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping("getAll")
-    public List<User> getId(){
+    public List<User> getAllId(){
         return userRepository.findAll();
     }
 

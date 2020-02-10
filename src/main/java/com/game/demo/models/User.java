@@ -12,24 +12,24 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    Long id;
+    public Long id;
 
     @Column(name = "UserID")
-    String userId;
+    public String userId;
 
     @Column(name = "AttemptID")
-    int attemptNo;
+    public int attemptNo;
 
     @Column(name = "Multiplication")
-    String multiplication;
+    public String multiplication;
 
     @Column(name = "UserAnswer")
-    int userAnswer;
+    public int userAnswer;
 
     @Column(name = "Result")
-    Boolean result;
+    public Boolean result;
 
-    User(){
+    public User(){
 
     }
 
